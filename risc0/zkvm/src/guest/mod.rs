@@ -93,6 +93,8 @@ pub use crate::entry;
 core::arch::global_asm!(include_str!("memset.s"));
 #[cfg(target_os = "zkvm")]
 core::arch::global_asm!(include_str!("memcpy.s"));
+#[cfg(target_os = "zkvm")]
+core::arch::global_asm!(include_str!("memcmp.s"));
 
 fn _fault() -> ! {
     #[cfg(target_os = "zkvm")]
